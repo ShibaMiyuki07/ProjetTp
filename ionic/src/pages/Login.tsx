@@ -13,16 +13,18 @@ const Login : React.FC = () =>{
             <IonHeader>
                 <IonToolbar>
                 <IonTitle>Login</IonTitle>
+                 
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
                 <IonHeader collapse="condense">
                 <IonToolbar>
                     <IonTitle size="large">Login</IonTitle>
-                      
+                                        
                 </IonToolbar>
                 </IonHeader>
                 <IonList>
+                    
                         <IonItem>
                             <IonLabel position="floating">Entrer votre pseudo....</IonLabel>
                             <IonInput name="nom" onIonInput={(e : any) => setNom(e.target.value)}></IonInput>
