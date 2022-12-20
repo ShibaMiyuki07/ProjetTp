@@ -29,7 +29,7 @@ public class AssuranceDao {
 		stmt.close();
 		return a;
 	}
-    public ArrayList<Assurance> findBy(int mois) throws SQLException
+    /*public ArrayList<Assurance> findBy(int mois) throws SQLException
 	{
         Date expire = Date.valueOf(LocalDate.now().plusMonths(mois));
 		String select = "select * from assurance where datefin > '"+expire+"'  ";
@@ -49,7 +49,7 @@ public class AssuranceDao {
         resultSet.close();
         stmt.close();
         return liste;
-	}
+	}*/
     public ArrayList<Assurance> findAll() throws SQLException
 	{
 		String select = "select * from assurance";
