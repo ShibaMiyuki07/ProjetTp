@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Connexion {
-	private static String url = "postgres://gfpmahfn:hISnxJlGxgTb1B73Xj4IXIOmlcVOyieB@floppy.db.elephantsql.com/gfpmahfn";
+	private static String url = "jdbc:postgres://floppy.db.elephantsql.com:5432/gfpmahfn";
     private static String user="gfpmahfn";
     private static String passwd = "hISnxJlGxgTb1B73Xj4IXIOmlcVOyieB";
 	private static Connection connect;
