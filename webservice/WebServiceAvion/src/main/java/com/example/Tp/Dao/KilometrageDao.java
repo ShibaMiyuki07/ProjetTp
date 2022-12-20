@@ -1,11 +1,11 @@
-package com.example.Tp.Base;
+package com.example.Tp.Dao;
 
 import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
+import java.util.*;
 
 import com.example.Tp.Model.Kilometrage;
 
@@ -21,7 +21,7 @@ public class KilometrageDao {
 	
 	public Kilometrage create(Kilometrage km) throws SQLException
 	{
-		String insert = "insert into marque(idvehicule,date_utilisation,debut_km,fin_km) values('"+km.getIdvehicule()+"','"+km.getDate_utilisation()+"','"+km.getDebut_km()+"','"+km.getFin_km()+"')";
+		String insert = "insert into kilometrage(idkilometrage, debutkm, fin_km, dateAvion, idavion) values('"++"', '"++"', '"++"', '"++"', "++")";
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();
@@ -30,7 +30,7 @@ public class KilometrageDao {
 	
 	public ArrayList<Kilometrage> findById(int id) throws SQLException
 	{
-		String select = "select * from kilometrage where idvehicule='"+id+"'";
+		String select = "select * from kilometrage where idavion='"+id+"'";
 		Statement stmt = connect.createStatement();
 		ResultSet resultSet = stmt.executeQuery(select);
 		ArrayList<Kilometrage> liste = new ArrayList<>();
@@ -38,13 +38,15 @@ public class KilometrageDao {
         while(resultSet.next())
         {
         	Kilometrage km = new Kilometrage();
-        	km.setIdvehicule(resultSet.getInt("idvehicule"));
-        	km.setDate_utilisation(resultSet.getString("date_utilisation"));
-        	Long debut_km = (Long) resultSet.getObject("debut_km");
-        	BigInteger test = BigInteger.valueOf(debut_km);
-        	km.setDebut_km(test);
-        	Long fin_km = (Long) resultSet.getObject("fin_km");
-        	BigInteger fin = BigInteger.valueOf(fin_km);
+			km.setIdkilometrage(resultSet.getInt("idkilometrage"));
+        	km.setIdavion(resultSet.getInt("idavion"));
+        	//km.setDebutkm(resultSet.getString("debutkm"));
+        	Long debutkm = (Long) resultSet.getObject("debutkm");
+        	BigInteger debut = BigInteger.valueOf(debutkm);
+        	km.setDebutkm(debut);
+        	Long finkm = (Long) resultSet.getObject("finkm");
+        	BigInteger fin = BigInteger.valueOf(finkm);
+			km.setDateavion(resultSet.getDate("dateavion"));
         	km.setFin_km(fin);
         	
         	liste.add(km);
@@ -63,13 +65,15 @@ public class KilometrageDao {
         while(resultSet.next())
         {
         	Kilometrage km = new Kilometrage();
-        	km.setIdvehicule(resultSet.getInt("idvehicule"));
-        	km.setDate_utilisation(resultSet.getString("date_utilisation"));
-        	Long debut_km = (Long) resultSet.getObject("debut_km");
-        	BigInteger test = BigInteger.valueOf(debut_km);
-        	km.setDebut_km(test);
-        	Long fin_km = (Long) resultSet.getObject("fin_km");
-        	BigInteger fin = BigInteger.valueOf(fin_km);
+			km.setIdkilometrage(resultSet.getInt("idkilometrage"));
+        	km.setIdavion(resultSet.getInt("idavion"));
+        	//km.setDebutkm(resultSet.getString("debutkm"));
+        	Long debutkm = (Long) resultSet.getObject("debutkm");
+        	BigInteger debut = BigInteger.valueOf(debutkm);
+        	km.setDebutkm(debut);
+        	Long finkm = (Long) resultSet.getObject("finkm");
+        	BigInteger fin = BigInteger.valueOf(finkm);
+			km.setDateavion(resultSet.getDate("dateavion"));
         	km.setFin_km(fin);
         	liste.add(km);
         }
