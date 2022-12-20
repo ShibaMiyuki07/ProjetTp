@@ -4,6 +4,8 @@ public class Destination {
     private int iddestination;
     private String destination;
     private String lieudapart;
+    private int idavion;
+
     public int getIddestination() {
         return iddestination;
     }
@@ -21,6 +23,12 @@ public class Destination {
     }
     public void setLieudapart(String lieudapart) {
         this.lieudapart = lieudapart;
+    }
+    public int getIdavion() {
+        return idavion;
+    }
+    public void setIdavion(int idavion) {
+        this.idavion = idavion;
     }
 
     

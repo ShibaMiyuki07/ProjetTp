@@ -1,13 +1,16 @@
 package com.example.Tp.Model;
 
-import java.math.BigInteger;
+
 import java.sql.Date;
 
 public class Kilometrage {
+	private int idkilometrage;
 	private int idavion;
+
 	private int debutkm;
 	private int finkm;
 	private Date dateAvion;
+
 	public int getIdavion() {
 		return idavion;
 	}
@@ -31,6 +34,12 @@ public class Kilometrage {
 	}
 	public void setDateAvion(Date dateAvion) {
 		this.dateAvion = dateAvion;
+	}
+	public int getIdkilometrage() {
+		return idkilometrage;
+	}
+	public void setIdkilometrage(int idkilometrage) {
+		this.idkilometrage = idkilometrage;
 	}
 	
 	

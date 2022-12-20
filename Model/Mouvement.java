@@ -7,7 +7,15 @@ public class Mouvement {
     private String numeroVol;
     private Date datedepart;
     private Date datearrive;
-    private Date dureeVol;
+    private int dureeVol;
+private int idavion;
+
+    public int getIdavion() {
+    return idavion;
+}
+public void setIdavion(int idavion) {
+    this.idavion = idavion;
+}
     public int getIdmouvement() {
         return idmouvement;
     }
@@ -32,12 +40,13 @@ public class Mouvement {
     public void setDatearrive(Date datearrive) {
         this.datearrive = datearrive;
     }
-    public Date getDureeVol() {
+    public int getDureeVol() {
         return dureeVol;
     }
-    public void setDureeVol(Date dureeVol) {
+    public void setDureeVol(int dureeVol) {
         this.dureeVol = dureeVol;
     }
+    
 
     
 
