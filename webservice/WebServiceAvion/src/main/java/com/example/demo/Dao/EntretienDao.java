@@ -1,4 +1,4 @@
-package com.example.Tp.Dao;
+package com.example.demo.Dao;
 
 import java.math.BigInteger;
 import java.sql.Connection;
@@ -7,11 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-import com.example.Tp.Model.Entretien;
+import com.example.demo.Base.Connexion;
+import com.example.demo.Model.Entretien;
 
 public class EntretienDao {
     private static Connection connect;
-	public KilometrageDao()
+	public EntretienDao()
 	{
 		if(connect == null)
 		{
@@ -25,9 +26,9 @@ public class EntretienDao {
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();
-		return km;
+		return e;
 	}
-    public ArrayList<Entretion> findById(int id) throws SQLException
+    public ArrayList<Entretien> findById(int id) throws SQLException
 	{
 		String select = "select * from entretien where identretien ='"+id+"'";
 		Statement stmt = connect.createStatement();
@@ -39,15 +40,15 @@ public class EntretienDao {
         	Entretien e = new Entretien();
 			e.setIdentretion(resultSet.getInt("identretien"));
         	e.setIdAvion(resultSet.getInt("idavion"));
-			km.setDateEntretien(resultSet.getDate("dateEntretien"));
-        	km.setIdAvion(resultSet.getInt("idavion"));
+			e.setDateEntretien(resultSet.getDate("dateEntretien"));
+        	e.setIdAvion(resultSet.getInt("idavion"));
         	liste.add(e);
         }
         stmt.close();
         resultSet.close();
         return liste;
 	}
-    public ArrayList<Entretion> findAll() throws SQLException
+    public ArrayList<Entretien> findAll() throws SQLException
 	{
 		String select = "select * from entretien";
 		Statement stmt = connect.createStatement();
@@ -59,8 +60,8 @@ public class EntretienDao {
         	Entretien e = new Entretien();
 			e.setIdentretion(resultSet.getInt("identretien"));
         	e.setIdAvion(resultSet.getInt("idavion"));
-			km.setDateEntretien(resultSet.getDate("dateEntretient"));
-        	km.setIdAvion(resultSet.getInt("idavion"));
+			e.setDateEntretien(resultSet.getDate("dateEntretient"));
+        	e.setIdAvion(resultSet.getInt("idavion"));
         	liste.add(e);
         }
         stmt.close();

@@ -1,4 +1,4 @@
-package com.example.Tp.Controller;
+package com.example.demo.Controller;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Tp.Base.KilometrageDao;
-import com.example.Tp.Model.Kilometrage;
+import com.example.demo.Dao.KilometrageDao;
+import com.example.demo.Model.Kilometrage;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/kilometrage")
+@RequestMapping("/Kilometrage")
 public class KilometrageController {
 	@PostMapping
 	public Kilometrage save(@RequestBody Kilometrage Kilometrage) throws SQLException

@@ -1,4 +1,4 @@
-package com.example.Tp.Model;
+package com.example.demo.Model;
 
 import java.math.BigInteger;
 import java.sql.Date;
@@ -6,8 +6,8 @@ import java.sql.Date;
 public class Kilometrage {
 	private int idkilometrage;
 	private int idavion;
-	private int debutkm;
-	private int finkm;
+	private BigInteger debutkm;
+	private BigInteger finkm;
 	private Date dateAvion;
 	public int getIdkilometrage(){
 		return idkilometrage;
@@ -21,16 +21,16 @@ public class Kilometrage {
 	public void setIdAvion(int idavion) {
 		this.idavion = idavion;
 	}
-	public int getDebutkm() {
+	public BigInteger getDebutkm() {
 		return debutkm;
 	}
-	public void setDebutkm(int debutkm) {
-		this.debutkm = debutkm;
+	public void setDebutkm(BigInteger debut) {
+		this.debutkm = debut;
 	}
-	public int getFinkm() {
+	public BigInteger getFinkm() {
 		return finkm;
 	}
-	public void setFinkm(int finkm) {
+	public void setFinkm(BigInteger finkm) {
 		this.finkm = finkm;
 	}
 	public Date getDateAvion() {

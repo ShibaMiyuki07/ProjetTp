@@ -1,4 +1,4 @@
-package com.example.Tp.Dao;
+package com.example.demo.Dao;
 
 import java.math.BigInteger;
 import java.sql.Connection;
@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-import com.example.Tp.Model.Kilometrage;
+import com.example.demo.Base.Connexion;
+import com.example.demo.Model.Kilometrage;
 
 public class KilometrageDao {
 	private static Connection connect;
@@ -73,8 +74,8 @@ public class KilometrageDao {
         	km.setDebutkm(debut);
         	Long finkm = (Long) resultSet.getObject("finkm");
         	BigInteger fin = BigInteger.valueOf(finkm);
-			km.setDateavion(resultSet.getDate("dateavion"));
-        	km.setFin_km(fin);
+			km.setDateAvion(resultSet.getDate("dateavion"));
+        	km.setFinkm(fin);
         	liste.add(km);
         }
         resultSet.close();

@@ -1,4 +1,4 @@
-package com.example.Tp.DB;
+package com.example.demo.Base;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

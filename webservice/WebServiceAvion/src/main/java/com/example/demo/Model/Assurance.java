@@ -1,4 +1,4 @@
-package com.example.Tp.Model;
+package com.example.demo.Model;
 
 import java.sql.Date;
 
@@ -7,6 +7,7 @@ public class Assurance {
 	private Date datedebut;
 	private Date datefin;
 	private String nomAssurance;
+	private int idavion;
 	public int getIdassurance() {
 		return idassurance;
 	}
@@ -30,6 +31,12 @@ public class Assurance {
 	}
 	public void setNomAssurance(String nomAssurance) {
 		this.nomAssurance = nomAssurance;
+	}
+	public int getIdavion() {
+		return idavion;
+	}
+	public void setIdavion(int idavion) {
+		this.idavion = idavion;
 	}
 
 

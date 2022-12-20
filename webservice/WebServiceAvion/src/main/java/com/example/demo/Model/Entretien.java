@@ -1,4 +1,4 @@
-package com.example.Tp.Model;
+package com.example.demo.Model;
 
 import java.sql.Date;
 
@@ -8,10 +8,10 @@ public class Entretien {
     private Date dateEntretien;
     private int idavion;
     public int getIdentretien() {
-        return identretion;
+        return this.identretien;
     }
     public void setIdentretion(int identretion) {
-        this.identretion = identretion;
+        this.identretien = identretion;
     }
     public int getIdtype_entretien(){
         return idtype_entretien;
@@ -20,16 +20,16 @@ public class Entretien {
         this.idtype_entretien = idtype_entretien;
     }
     public Date getDateEntretien() {
-        return dateEntretient;
+        return dateEntretien;
     }
     public void setDateEntretien(Date dateEntretient) {
-        this.dateEntretient = dateEntretient;
+        this.dateEntretien = dateEntretient;
     }
     public int getIdAvion() {
-		return idAvion;
+		return idavion;
 	}
 	public void setIdAvion(int idAvion) {
-		this.idAvion = idAvion;
+		this.idavion = idAvion;
 	}
     
 }

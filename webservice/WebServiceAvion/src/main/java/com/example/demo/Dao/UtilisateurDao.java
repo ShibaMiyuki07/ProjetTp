@@ -1,4 +1,4 @@
-package com.example.Tp.Dao;
+package com.example.demo.Dao;
 
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import com.example.Tp.Model.Utilisateur;
-import com.example.Tp.Util.Token;
+import com.example.demo.Base.Connexion;
+import com.example.demo.Model.Utilisateur;
+import com.example.demo.Util.Token;
 
 public class UtilisateurDao {
 	private static Connection connect ;

@@ -1,4 +1,4 @@
-package com.example.Tp.Controller;
+package com.example.demo.Controller;
 
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Tp.Base.TokenDao;
-import com.example.Tp.Base.UtilisateurDao;
-import com.example.Tp.Model.Utilisateur;
-import com.example.Tp.Util.Token;
+import com.example.demo.Dao.UtilisateurDao;
+import com.example.demo.Model.Utilisateur;
+
 
 @RestController
 @CrossOrigin

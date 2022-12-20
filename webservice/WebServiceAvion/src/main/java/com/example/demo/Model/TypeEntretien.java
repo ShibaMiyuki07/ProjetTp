@@ -1,4 +1,4 @@
-package com.example.Tp.Model;
+package com.example.demo.Model;
 
 public class TypeEntretien {
     private int idtype_entretien;

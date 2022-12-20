@@ -1,17 +1,19 @@
-package com.example.Tp.Dao;
+package com.example.demo.Dao;
 
 import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.*;
 
-import com.example.Tp.Model.Assurance;
+import com.example.demo.Base.Connexion;
+import com.example.demo.Model.Assurance;
 
 public class AssuranceDao {
     private static Connection connect;
-	public KilometrageDao()
+	public AssuranceDao()
 	{
 		if(connect == null)
 		{
@@ -21,11 +23,11 @@ public class AssuranceDao {
 	
     public Assurance create(Assurance a) throws SQLException
 	{
-		String insert = "insert into assurance(datedebut, datefin, nomAssurance, idavion) values('"+a.getDatedebut()+"', '"+e.getDatefin()+"', '"+e.getNomAssurance()+"','"+e.getIdAvion()+"')";
+		String insert = "insert into assurance(datedebut, datefin, nomAssurance) values('"+a.getDatedebut()+"', '"+a.getDatefin()+"', '"+a.getNomAssurance()+"','"+a.getIdavion()+"')";
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();
-		return km;
+		return a;
 	}
     public ArrayList<Assurance> findBy(int mois) throws SQLException
 	{
@@ -41,7 +43,7 @@ public class AssuranceDao {
         	a.setDatedebut(resultSet.getDate("datedebut"));
 			a.setDatefin(resultSet.getDate("datefin"));
         	a.setNomAssurance(resultSet.getString("nomAssurance"));
-            a.setIdAvion(resultSet.getInt("idavion"));
+            a.setIdavion(resultSet.getInt("idavion"));
         	liste.add(a);
         }
         resultSet.close();
@@ -61,7 +63,7 @@ public class AssuranceDao {
         	a.setDatedebut(resultSet.getDate("datedebut"));
 			a.setDatefin(resultSet.getDate("datefin"));
         	a.setNomAssurance(resultSet.getString("nomAssurance"));
-            a.setIdAvion(resultSet.getInt("idavion"));
+            a.setIdavion(resultSet.getInt("idavion"));
         	liste.add(a);
         }
         resultSet.close();

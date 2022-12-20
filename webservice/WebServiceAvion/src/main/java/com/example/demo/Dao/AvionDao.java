@@ -1,4 +1,4 @@
-package com.example.Tp.Dao;
+package com.example.demo.Dao;
 
 import java.math.BigInteger;
 import java.sql.Connection;
@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import com.example.Tp.Model.Avion;
+import com.example.demo.Base.Connexion;
+import com.example.demo.Model.Avion;
 
 
 public class AvionDao {
@@ -21,7 +22,7 @@ public class AvionDao {
 	}
 	public Avion create(Avion avion) throws SQLException
 	{
-		String insert = "insert into avion(nomAvion,capacite,envergue,hauteur,masseDecollage,vitesseCroisiere,vitessemax,rayonmax,capaciteKerosene,photo) values('"+avion.getNomAvion()"','"+avion.getCapacite()+"','"+avion.getEnvergure()+"','"+avion.getHauteur()+"','"+avion.getMasseDecollage()+"','"+avion.getVitesseCroisiere()+"','"+avion.getVitessemax()+"','"+avion.getRayonmax()"','"+avion.getCapaciteKerosene()+"','"+avion.getPhoto()+"')";
+		String insert = "insert into avion(nomAvion,capacite,envergue,hauteur,masseDecollage,vitesseCroisiere,vitessemax,rayonmax,capaciteKerosene,photo) values('"+avion.getNomAvion()+"','"+avion.getCapacite()+"','"+avion.getEnvergure()+"','"+avion.getHauteur()+"','"+avion.getMasseDecollage()+"','"+avion.getVitesseCroisiere()+"','"+avion.getVitessemax()+"','"+avion.getRayonmax()+"','"+avion.getCapaciteKerosene()+"','"+avion.getPhoto()+"')";
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();
@@ -146,7 +147,8 @@ public class AvionDao {
 			av.setMasseDecollage(resultSet.getInt("masseDecollage"));
 			av.setVitesseCroisiere(resultSet.getInt("vitesseCroisiere"));
 			av.setVitessemax(resultSet.getInt("vitessemax"));
-			av.setRayonmax(resultSet.getInt("rayonmax"))av.setCapaciteKerosene(resultSet.getInt("capaciteKerosene"));
+			av.setRayonmax(resultSet.getInt("rayonmax"));
+			av.setCapaciteKerosene(resultSet.getInt("capaciteKerosene"));
 			av.setPhoto(resultSet.getString("photo"));
         	liste.add(av);
         }
@@ -171,7 +173,7 @@ public class AvionDao {
 
 	public Avion update(Avion avion) throws SQLException
 	{
-		String update = "update avion set photo='"+avion.getPhoto()+"' where idavion = '"+avion.getIdAvion+"";
+		String update = "update avion set photo='"+avion.getPhoto()+"' where idavion = '"+avion.getIdAvion()+"";
 		Statement stmt = connect.createStatement();
 		stmt.execute(update);
 		stmt.close();
