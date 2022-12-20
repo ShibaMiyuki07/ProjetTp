@@ -1,7 +1,11 @@
 {
   "name": "ionic",
+<<<<<<< Updated upstream
   "integrations": {
     "capacitor": {}
   },
+=======
+  "integrations": {},
+>>>>>>> Stashed changes
   "type": "react"
 }
