@@ -44,7 +44,7 @@ public class UtilisateurDao {
         while(resultSet.next())
         {
         	user.setId(resultSet.getInt("id"));
-        	user.setPseudo(resultSet.getString("nom_utilisateu"));
+        	user.setPseudo(resultSet.getString("pseudo"));
         	user.setMdp(resultSet.getString("mdp"));
         }
         stmt.close();

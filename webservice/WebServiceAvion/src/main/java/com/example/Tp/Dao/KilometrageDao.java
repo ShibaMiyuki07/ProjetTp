@@ -21,7 +21,7 @@ public class KilometrageDao {
 	
 	public Kilometrage create(Kilometrage km) throws SQLException
 	{
-		String insert = "insert into kilometrage(idkilometrage, debutkm, fin_km, dateAvion, idavion) values('"++"', '"++"', '"++"', '"++"', "++")";
+		String insert = "insert into kilometrage(debutkm, fin_km, dateAvion, idavion) values('"+km.getDebutkm()+"', '"+km.getFinkm()+"', '"+km.getDateAvion()+"',"+km.getIdAvion()+")";
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();
@@ -39,15 +39,15 @@ public class KilometrageDao {
         {
         	Kilometrage km = new Kilometrage();
 			km.setIdkilometrage(resultSet.getInt("idkilometrage"));
-        	km.setIdavion(resultSet.getInt("idavion"));
+        	km.setIdAvion(resultSet.getInt("idavion"));
         	//km.setDebutkm(resultSet.getString("debutkm"));
         	Long debutkm = (Long) resultSet.getObject("debutkm");
         	BigInteger debut = BigInteger.valueOf(debutkm);
         	km.setDebutkm(debut);
         	Long finkm = (Long) resultSet.getObject("finkm");
         	BigInteger fin = BigInteger.valueOf(finkm);
-			km.setDateavion(resultSet.getDate("dateavion"));
-        	km.setFin_km(fin);
+			km.setDateAvion(resultSet.getDate("dateavion"));
+        	km.setFinkm(fin);
         	
         	liste.add(km);
         }
@@ -66,7 +66,7 @@ public class KilometrageDao {
         {
         	Kilometrage km = new Kilometrage();
 			km.setIdkilometrage(resultSet.getInt("idkilometrage"));
-        	km.setIdavion(resultSet.getInt("idavion"));
+        	km.setIdAvion(resultSet.getInt("idavion"));
         	//km.setDebutkm(resultSet.getString("debutkm"));
         	Long debutkm = (Long) resultSet.getObject("debutkm");
         	BigInteger debut = BigInteger.valueOf(debutkm);
