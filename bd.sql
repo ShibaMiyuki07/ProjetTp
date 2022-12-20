@@ -92,7 +92,7 @@ create table entretien(
     identretion serial primary key not null,
     idtype_entretien int references type_entretien(idtype_entretien),
     dateEntretient date,
-    idassurance int references avion(idavion)
+    idavion int references avion(idavion)
 );
 insert into entretien(idtype_entretien,dateEntretient,idassurance)values(2,'2022-02-19', 2);
 insert into entretien(idtype_entretien,dateEntretient,idassurance)values(1,'2022-03-01', 1);
