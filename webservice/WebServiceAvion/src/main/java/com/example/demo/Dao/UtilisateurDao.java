@@ -23,7 +23,8 @@ public class UtilisateurDao {
 	
 	public Utilisateur create(Utilisateur user) throws SQLException, NoSuchAlgorithmException
 	{
-		String insert = "insert into utilisateur(pseudo,mdp) values('"+user.getPseudo()+"','"+ashmdp+"')";
+		user.setMdp(Token.toAsh(user.getMdp()));
+		String insert = "insert into utilisateur(pseudo,mdp) values('"+user.getPseudo()+"','"+user.getMdp()+"')";
 		Statement stmt = connect.createStatement();
 		stmt.execute(insert);
 		stmt.close();

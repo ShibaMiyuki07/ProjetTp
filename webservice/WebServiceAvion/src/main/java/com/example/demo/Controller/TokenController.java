@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Tp.Base.TokenDao;
-import com.example.Tp.Util.Token;
+import com.example.demo.Dao.TokenDao;
+import com.example.demo.Util.Token;
+
 
 @RestController
 @CrossOrigin
